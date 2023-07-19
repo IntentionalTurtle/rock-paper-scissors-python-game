@@ -17,7 +17,6 @@ class rps():
         import random
         while self.gameflag == True:
             comp_int = random.randint(1,3)
-            print(comp_int)
             player_choice = input("Rock, Paper, or Scissors? You may also enter 'I quit' to end.\n")
             if player_choice.lower() == 'i quit' or player_choice.lower() == 'quit' or player_choice.lower() == 'iquit':
                 self.gameflag = False
@@ -25,11 +24,9 @@ class rps():
             if player_choice.lower() == 'rock' or player_choice.lower() == 'paper' or player_choice.lower() == 'scissors':
                 player_int = self.str_choice_dict[player_choice.lower()]
                 self.compareChoice(player_int, comp_int)
-                print('Checkpoint')
+                # print('Checkpoint')
             else:
                 print('Please input either Rock, Paper, Scissors, or "I quit"')
-
-
 
     def compareChoice(self, player, comp):
         if player == comp:
